@@ -13,7 +13,7 @@ namespace ris.Repo
         public static Djelatnik GetDjelatnik(int id) {
             Djelatnik djelatnik = null;
             string upit = $"SELECT * FROM djelatnik WHERE id = {id}";
-            MyDB.OpenConnection();
+            MyDB.OpenConn();
             var reader = MyDB.GetDataReader(upit);
 
             if (reader.HasRows) {
@@ -22,7 +22,7 @@ namespace ris.Repo
                 reader.Close();
             }
 
-            MyDB.CloseConnection();
+            MyDB.CloseConn();
             return djelatnik;
         }
 
@@ -30,7 +30,7 @@ namespace ris.Repo
             List<Djelatnik> djelatnici = new List<Djelatnik>();
 
             string upit = "SELECT * FROM djelatnik";
-            MyDB.OpenConnection();
+            MyDB.OpenConn();
             var reader = MyDB.GetDataReader(upit);
 
             while (reader.Read()) {
@@ -39,7 +39,7 @@ namespace ris.Repo
             }
 
             reader.Close();
-            MyDB.CloseConnection();
+            MyDB.CloseConn();
 
             return djelatnici;
         }

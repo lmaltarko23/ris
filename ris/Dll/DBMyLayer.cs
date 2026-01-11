@@ -10,12 +10,12 @@ namespace ris.Dll
         private static string _connectionString = @"Data Source=localhost;
 Port=3306; Database=ris; User Id=ris; Password=ris; SslMode=None";
         private static MySqlConnection _connection;
-        public static void OpenConnection()
+        public static void OpenConn()
         {
             _connection = new MySqlConnection(_connectionString);
             _connection.Open();
         }
-        public static void CloseConnection()
+        public static void CloseConn()
         {
             if (_connection.State != System.Data.ConnectionState.Closed)
             {

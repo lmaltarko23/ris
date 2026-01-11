@@ -18,9 +18,15 @@ namespace ris.Forme
 
         private void btnPregledDjelatnika_Click(object sender, EventArgs e)
         {
-            FrmDjelatnici frmDjelatnici = new FrmDjelatnici();
+            var frmDjelatnici = new FrmDjelatnici();
             frmDjelatnici.ShowDialog();
 
+        }
+
+        private void btnPregledStolova_Click(object sender, EventArgs e)
+        {
+            var frmStolovi = new frmStolovi();
+            frmStolovi.ShowDialog();
         }
     }
 }

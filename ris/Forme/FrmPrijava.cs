@@ -8,7 +8,7 @@ namespace ris
         public FrmPrijava()
         {
             InitializeComponent();
-            MyDB.OpenConnection();
+            MyDB.OpenConn();
 
             
         }

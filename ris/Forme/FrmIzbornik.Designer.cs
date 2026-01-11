@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             btnPregledDjelatnika = new Button();
+            btnPregledStolova = new Button();
             SuspendLayout();
             // 
             // btnPregledDjelatnika
             // 
+            btnPregledDjelatnika.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnPregledDjelatnika.Location = new Point(39, 58);
             btnPregledDjelatnika.Name = "btnPregledDjelatnika";
             btnPregledDjelatnika.Size = new Size(162, 38);
@@ -41,11 +43,23 @@
             btnPregledDjelatnika.UseVisualStyleBackColor = true;
             btnPregledDjelatnika.Click += btnPregledDjelatnika_Click;
             // 
+            // btnPregledStolova
+            // 
+            btnPregledStolova.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnPregledStolova.Location = new Point(39, 102);
+            btnPregledStolova.Name = "btnPregledStolova";
+            btnPregledStolova.Size = new Size(162, 38);
+            btnPregledStolova.TabIndex = 1;
+            btnPregledStolova.Text = "Pregled stolova";
+            btnPregledStolova.UseVisualStyleBackColor = true;
+            btnPregledStolova.Click += btnPregledStolova_Click;
+            // 
             // FrmIzbornik
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnPregledStolova);
             Controls.Add(btnPregledDjelatnika);
             Name = "FrmIzbornik";
             Text = "Izbornik";
@@ -55,5 +69,6 @@
         #endregion
 
         private Button btnPregledDjelatnika;
+        private Button btnPregledStolova;
     }
 }
