@@ -18,4 +18,8 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Forme\Slozene\" />
+  </ItemGroup>
+
 </Project>

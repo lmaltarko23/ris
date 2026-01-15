@@ -28,5 +28,35 @@ namespace ris.Forme
             var frmStolovi = new frmStolovi();
             frmStolovi.ShowDialog();
         }
+
+        private void btnNovaNarudzba_Click(object sender, EventArgs e)
+        {
+            btnNovaNarudzba.Enabled = false;
+        }
+
+        private void btnNovaNarudzba_Click_1(object sender, EventArgs e)
+        {
+            btnNovaNarudzba.Enabled = false;
+        }
+
+        private void btnPregledNarudzbi_Click(object sender, EventArgs e)
+        {
+            btnPregledNarudzbi.Enabled = false;
+        }
+
+        private void btnNaplata_Click(object sender, EventArgs e)
+        {
+            btnNaplata.Enabled = false;
+        }
+
+        private void btnNovaRezervacija_Click(object sender, EventArgs e)
+        {
+            btnNovaRezervacija.Enabled = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            btnPregledRezervacija.Enabled = false;
+        }
     }
 }
