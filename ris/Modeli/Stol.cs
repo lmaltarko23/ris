@@ -11,7 +11,9 @@ namespace ris.Modeli
         public int Mjesta { get; set; }
         public enum Statusi
         {
-            slobodan,   zauzet,     rezerviran
+            slobodan,
+            zauzet,
+            rezerviran
         }
         public Statusi Status { get; set; }
     }

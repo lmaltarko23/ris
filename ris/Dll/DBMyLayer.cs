@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using MySqlConnector;
 
+
+
 namespace ris.Dll
 {
     public static class MyDB
