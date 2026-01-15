@@ -22,12 +22,12 @@ namespace ris
             
             if (text != "") MessageBox.Show("Korisnièko ime nije uneseno", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            string korime = "korime";
-            string lozinka = "korime";
+            string korime = "admin";
+            string lozinka = "admin";
 
             if (txtKorime.Text == korime && txtLozinka.Text == lozinka)
             {
-                MessageBox.Show("Prijava uspješna", "Prijava uspješna", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Prijava uspješna", "Prijava uspješna", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FrmIzbornik frmIzbornik = new FrmIzbornik();
                 Hide();
                 frmIzbornik.ShowDialog();

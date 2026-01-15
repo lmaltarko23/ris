@@ -35,6 +35,8 @@
             btnNaplata = new Button();
             btnNovaRezervacija = new Button();
             btnPregledRezervacija = new Button();
+            btnPregledKategorija = new Button();
+            btnPregledArtikla = new Button();
             SuspendLayout();
             // 
             // btnPregledDjelatnika
@@ -107,11 +109,33 @@
             btnPregledRezervacija.UseVisualStyleBackColor = true;
             btnPregledRezervacija.Click += button2_Click;
             // 
+            // btnPregledKategorija
+            // 
+            btnPregledKategorija.Location = new Point(416, 305);
+            btnPregledKategorija.Name = "btnPregledKategorija";
+            btnPregledKategorija.Size = new Size(162, 112);
+            btnPregledKategorija.TabIndex = 8;
+            btnPregledKategorija.Text = "Pregled kategorija";
+            btnPregledKategorija.UseVisualStyleBackColor = true;
+            btnPregledKategorija.Click += btnPregledKategorija_Click;
+            // 
+            // btnPregledArtikla
+            // 
+            btnPregledArtikla.Location = new Point(220, 305);
+            btnPregledArtikla.Name = "btnPregledArtikla";
+            btnPregledArtikla.Size = new Size(162, 112);
+            btnPregledArtikla.TabIndex = 9;
+            btnPregledArtikla.Text = "Pregled artikla";
+            btnPregledArtikla.UseVisualStyleBackColor = true;
+            btnPregledArtikla.Click += btnPregledArtikla_Click;
+            // 
             // FrmIzbornik
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(794, 441);
+            Controls.Add(btnPregledArtikla);
+            Controls.Add(btnPregledKategorija);
             Controls.Add(btnNovaRezervacija);
             Controls.Add(btnPregledRezervacija);
             Controls.Add(btnNaplata);
@@ -133,5 +157,7 @@
         private Button btnNaplata;
         private Button btnNovaRezervacija;
         private Button btnPregledRezervacija;
+        private Button btnPregledKategorija;
+        private Button btnPregledArtikla;
     }
 }

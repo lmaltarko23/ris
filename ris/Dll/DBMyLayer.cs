@@ -29,7 +29,7 @@ Port=3306; Database=ris; User Id=ris; Password=ris; SslMode=None";
             MySqlCommand command = new MySqlCommand(query, _connection);
             return command.ExecuteReader();
         }
-        public static int ExecuteCommand(string sqlCommand)
+        public static int Run(string sqlCommand)
         {
             MySqlCommand command = new MySqlCommand(sqlCommand, _connection);
             return command.ExecuteNonQuery();

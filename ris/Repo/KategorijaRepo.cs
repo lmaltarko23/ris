@@ -59,5 +59,19 @@ namespace ris.Repo
 
             return kategorija;
         }
+
+        public static void Insert(Kategorija nova) { 
+            string upit = $"INSERT INTO kategorija (naziv, opis) VALUES ('{nova.Naziv}', '{nova.Opis}')";
+            MyDB.OpenConn();
+            MyDB.Run(upit);
+            MyDB.CloseConn();
+        }
+
+        public static void Delete(Kategorija stara) {
+            string upit = $"DELETE FROM kategorija WHERE id = {stara.Id}";
+            MyDB.OpenConn();
+            MyDB.Run(upit);
+            MyDB.CloseConn();
+        }
     }
 }

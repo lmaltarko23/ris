@@ -58,5 +58,17 @@ namespace ris.Forme
         {
             btnPregledRezervacija.Enabled = false;
         }
+
+        private void btnPregledKategorija_Click(object sender, EventArgs e)
+        {
+            frmKategorija frmKategorija = new frmKategorija();
+            frmKategorija.ShowDialog();
+        }
+
+        private void btnPregledArtikla_Click(object sender, EventArgs e)
+        {
+            FrmArtikli frmArtikli = new FrmArtikli();
+            frmArtikli.ShowDialog();
+        }
     }
 }
