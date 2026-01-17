@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Windows.Forms;
 
@@ -12,6 +13,8 @@ namespace ris.Forme.Jednostavne
 {
     public partial class frmKategorijaDodaj : Form
     {
+        public enum ModEnum { Dodaj, Uredi};
+        public ModEnum Mod { get; set; }
         public frmKategorijaDodaj()
         {
             InitializeComponent();
@@ -35,7 +38,7 @@ namespace ris.Forme.Jednostavne
             novaKategorija = new Kategorija
             {
                 Naziv = txtNaziv.Text,
-                Opis = txtOpis.Text
+                Opis = txtOpis.Text,
             };
 
             KategorijaRepo.Insert(novaKategorija);

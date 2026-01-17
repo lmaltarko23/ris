@@ -54,6 +54,7 @@
             cboKategorija.Name = "cboKategorija";
             cboKategorija.Size = new Size(229, 28);
             cboKategorija.TabIndex = 1;
+            cboKategorija.SelectedIndexChanged += cboKategorija_SelectedIndexChanged;
             // 
             // txtOpis
             // 
@@ -124,6 +125,7 @@
             button1.TabIndex = 9;
             button1.Text = "Spremi";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // FrmArtiklNovi
             // 

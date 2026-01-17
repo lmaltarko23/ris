@@ -15,6 +15,7 @@ namespace ris.Forme.Jednostavne
         public FrmArtikli()
         {
             InitializeComponent();
+            Ucitaj();
         }
 
         private void btnOsvjezi_Click(object sender, EventArgs e)
@@ -22,9 +23,17 @@ namespace ris.Forme.Jednostavne
             Ucitaj();
         }
 
-        private void Ucitaj() { 
+        private void Ucitaj()
+        {
             List<Artikl> artikli = ArtiklRepo.GetArtikli();
             dgvArtikli.DataSource = artikli;
+        }
+
+        private void btnNovi_Click(object sender, EventArgs e)
+        {
+            FrmArtiklNovi frmArtiklNovi = new FrmArtiklNovi();
+            frmArtiklNovi.ShowDialog();
+            Ucitaj();
         }
     }
 }

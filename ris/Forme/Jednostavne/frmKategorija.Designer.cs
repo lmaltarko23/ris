@@ -31,6 +31,8 @@
             dgvKategorija = new DataGridView();
             btnDodajNovu = new Button();
             btnOsvjezi = new Button();
+            button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvKategorija).BeginInit();
             SuspendLayout();
             // 
@@ -46,7 +48,7 @@
             // 
             // btnDodajNovu
             // 
-            btnDodajNovu.Location = new Point(593, 381);
+            btnDodajNovu.Location = new Point(208, 381);
             btnDodajNovu.Name = "btnDodajNovu";
             btnDodajNovu.Size = new Size(170, 29);
             btnDodajNovu.TabIndex = 1;
@@ -56,7 +58,7 @@
             // 
             // btnOsvjezi
             // 
-            btnOsvjezi.Location = new Point(481, 381);
+            btnOsvjezi.Location = new Point(681, 381);
             btnOsvjezi.Name = "btnOsvjezi";
             btnOsvjezi.Size = new Size(106, 29);
             btnOsvjezi.TabIndex = 2;
@@ -64,11 +66,31 @@
             btnOsvjezi.UseVisualStyleBackColor = true;
             btnOsvjezi.Click += button1_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(384, 381);
+            button1.Name = "button1";
+            button1.Size = new Size(137, 29);
+            button1.TabIndex = 3;
+            button1.Text = "Uredi kategoriju";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(527, 381);
+            button2.Name = "button2";
+            button2.Size = new Size(134, 29);
+            button2.TabIndex = 4;
+            button2.Text = "Obriši kategoriju";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // frmKategorija
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(btnOsvjezi);
             Controls.Add(btnDodajNovu);
             Controls.Add(dgvKategorija);
@@ -84,5 +106,7 @@
         private DataGridView dgvKategorija;
         private Button btnDodajNovu;
         private Button btnOsvjezi;
+        private Button button1;
+        private Button button2;
     }
 }

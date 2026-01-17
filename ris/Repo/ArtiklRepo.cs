@@ -30,7 +30,7 @@ namespace ris.Repo
         public static List<Artikl> GetArtikli() {
             List<Artikl> artikli = new List<Artikl>();
 
-            string upit = "SELECT * FROM artikli";
+            string upit = "SELECT * FROM artikl";
             MyDB.OpenConn();
             var reader = MyDB.GetDataReader(upit);
 
@@ -62,6 +62,24 @@ namespace ris.Repo
             };
 
             return artikl;
+        }
+        public static void Insert(Artikl novi)
+        {
+            if (novi.Kategorija == null)
+                throw new ArgumentException("Kategorija must be selected before inserting artikl.");
+
+            string upit = $"INSERT INTO artikl (naziv, cijena, opis, kategorija_id) VALUES ('{novi.Naziv}', {novi.Cijena}, '{novi.Opis}', {novi.Kategorija.Id})";
+            MyDB.OpenConn();
+            MyDB.Run(upit);
+            MyDB.CloseConn();
+        }
+
+        public static void Delete(Artikl stari)
+        {
+            string upit = $"DELETE FROM artikl WHERE id = {stari.Id}";
+            MyDB.OpenConn();
+            MyDB.Run(upit);
+            MyDB.CloseConn();
         }
     }
 }

@@ -52,6 +52,7 @@
             btnNovi.TabIndex = 1;
             btnNovi.Text = "Dodaj novi artikl";
             btnNovi.UseVisualStyleBackColor = true;
+            btnNovi.Click += btnNovi_Click;
             // 
             // btnUredi
             // 

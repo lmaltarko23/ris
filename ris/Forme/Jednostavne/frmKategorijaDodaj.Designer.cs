@@ -101,7 +101,7 @@
             Controls.Add(btnOdustani);
             Controls.Add(btnSpremi);
             Name = "frmKategorijaDodaj";
-            Text = "frmKategorijaDodaj";
+            Text = "frmKategorijaCU";
             ResumeLayout(false);
             PerformLayout();
         }

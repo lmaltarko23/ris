@@ -32,6 +32,7 @@ namespace ris.Forme.Jednostavne
         {
             frmKategorijaDodaj frmKategorijaDodaj = new frmKategorijaDodaj();
             frmKategorijaDodaj.ShowDialog();
+            UčitajKategorije();
         }
 
         private void button1_Click(object sender, EventArgs e)

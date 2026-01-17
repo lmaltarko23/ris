@@ -31,8 +31,20 @@ Port=3306; Database=ris; User Id=ris; Password=ris; SslMode=None";
         }
         public static int Run(string sqlCommand)
         {
-            MySqlCommand command = new MySqlCommand(sqlCommand, _connection);
-            return command.ExecuteNonQuery();
+            try
+            {
+                MySqlCommand command = new MySqlCommand(sqlCommand, _connection);
+                return command.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show($"GRESKA BAZE: {ex.Message}\n (upit: {sqlCommand}", "GRESKA BAZE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
+            }
+            catch (Exception ex) {
+                MessageBox.Show($"GENERALNA GRESKA. PRIMJEDBA: {ex.Message}", "GENERALNA GRESKA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
+            }
         }
     }
 }
