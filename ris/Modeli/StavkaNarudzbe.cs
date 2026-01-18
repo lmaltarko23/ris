@@ -4,15 +4,15 @@ using System.Text;
 
 namespace ris.Modeli
 {
-    internal class StavkaNarudzbe
+    public class StavkaNarudzbe
     {
-        public int narudzbaId { get; set; }
-        public int artiklId { get; set; }
-        public int kolicina { get; set; }
-        public DateTime vrijeme {get; set; }
+        public int NarudzbaId { get; set; }
+        public int ArtiklId { get; set; }
+        public int Kolicina { get; set; }
+        public DateTime Vrijeme {get; set; }
 
         public enum StatusEnum { Na_cekanju, U_pripremi, Gotovo}
-        public StatusEnum status { get; set; }
+        public StatusEnum Status { get; set; }
 
         internal static StatusEnum Parse(string? v)
         {
