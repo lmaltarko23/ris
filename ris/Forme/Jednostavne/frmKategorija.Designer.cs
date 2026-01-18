@@ -29,32 +29,37 @@
         private void InitializeComponent()
         {
             dgvKategorija = new DataGridView();
-            btnDodajNovu = new Button();
+            btnDodaj = new Button();
             btnOsvjezi = new Button();
-            button1 = new Button();
-            button2 = new Button();
+            btnUredi = new Button();
+            btnObrisi = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvKategorija).BeginInit();
             SuspendLayout();
             // 
             // dgvKategorija
             // 
+            dgvKategorija.AllowUserToAddRows = false;
+            dgvKategorija.AllowUserToDeleteRows = false;
             dgvKategorija.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvKategorija.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvKategorija.Location = new Point(14, 12);
+            dgvKategorija.MultiSelect = false;
             dgvKategorija.Name = "dgvKategorija";
+            dgvKategorija.ReadOnly = true;
             dgvKategorija.RowHeadersWidth = 51;
+            dgvKategorija.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvKategorija.Size = new Size(773, 344);
             dgvKategorija.TabIndex = 0;
             // 
-            // btnDodajNovu
+            // btnDodaj
             // 
-            btnDodajNovu.Location = new Point(208, 381);
-            btnDodajNovu.Name = "btnDodajNovu";
-            btnDodajNovu.Size = new Size(170, 29);
-            btnDodajNovu.TabIndex = 1;
-            btnDodajNovu.Text = "Dodaj novu kategoriju";
-            btnDodajNovu.UseVisualStyleBackColor = true;
-            btnDodajNovu.Click += btnDodajNovu_Click;
+            btnDodaj.Location = new Point(208, 381);
+            btnDodaj.Name = "btnDodaj";
+            btnDodaj.Size = new Size(170, 29);
+            btnDodaj.TabIndex = 1;
+            btnDodaj.Text = "Dodaj novu kategoriju";
+            btnDodaj.UseVisualStyleBackColor = true;
+            btnDodaj.Click += btnDodajNovu_Click;
             // 
             // btnOsvjezi
             // 
@@ -66,36 +71,38 @@
             btnOsvjezi.UseVisualStyleBackColor = true;
             btnOsvjezi.Click += button1_Click;
             // 
-            // button1
+            // btnUredi
             // 
-            button1.Location = new Point(384, 381);
-            button1.Name = "button1";
-            button1.Size = new Size(137, 29);
-            button1.TabIndex = 3;
-            button1.Text = "Uredi kategoriju";
-            button1.UseVisualStyleBackColor = true;
+            btnUredi.Location = new Point(384, 381);
+            btnUredi.Name = "btnUredi";
+            btnUredi.Size = new Size(137, 29);
+            btnUredi.TabIndex = 3;
+            btnUredi.Text = "Uredi kategoriju";
+            btnUredi.UseVisualStyleBackColor = true;
+            btnUredi.Click += btnUredi_Click;
             // 
-            // button2
+            // btnObrisi
             // 
-            button2.Location = new Point(527, 381);
-            button2.Name = "button2";
-            button2.Size = new Size(134, 29);
-            button2.TabIndex = 4;
-            button2.Text = "Obriši kategoriju";
-            button2.UseVisualStyleBackColor = true;
+            btnObrisi.Location = new Point(527, 381);
+            btnObrisi.Name = "btnObrisi";
+            btnObrisi.Size = new Size(134, 29);
+            btnObrisi.TabIndex = 4;
+            btnObrisi.Text = "Obriši kategoriju";
+            btnObrisi.UseVisualStyleBackColor = true;
+            btnObrisi.Click += btnObrisi_Click;
             // 
             // frmKategorija
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnObrisi);
+            Controls.Add(btnUredi);
             Controls.Add(btnOsvjezi);
-            Controls.Add(btnDodajNovu);
+            Controls.Add(btnDodaj);
             Controls.Add(dgvKategorija);
             Name = "frmKategorija";
-            Text = "frmKategorija";
+            Text = "Pregled kategorija";
             Load += frmKategorija_Load;
             ((System.ComponentModel.ISupportInitialize)dgvKategorija).EndInit();
             ResumeLayout(false);
@@ -108,5 +115,8 @@
         private Button btnOsvjezi;
         private Button button1;
         private Button button2;
+        private Button btnDodaj;
+        private Button btnUredi;
+        private Button btnObrisi;
     }
 }

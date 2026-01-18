@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Policy;
 using System.Text;
 using MySqlConnector;
 using ris.Dll;
@@ -69,6 +70,13 @@ namespace ris.Repo
 
         public static void Delete(Kategorija stara) {
             string upit = $"DELETE FROM kategorija WHERE id = {stara.Id}";
+            MyDB.OpenConn();
+            MyDB.Run(upit);
+            MyDB.CloseConn();
+        }
+
+        public static void Update(Kategorija izmjenjena) {
+            string upit = $"UPDATE kategorija SET naziv = '{izmjenjena.Naziv}', opis = '{izmjenjena.Opis}' WHERE id = {izmjenjena.Id}";
             MyDB.OpenConn();
             MyDB.Run(upit);
             MyDB.CloseConn();

@@ -7,10 +7,11 @@ namespace ris.Modeli
     internal class Narudzba
     {
         public int Id { get; set; }
-        public string Naziv { get; set; }
-        public string Opis { get; set; }
-        public float cijena { get; set; }
-        public bool Dostupan { get; set; }
-        public Kategorija Kategorija { get; set; }
+        public Djelatnik Zaprimio { get; set; }
+        public DateTime Zaprimljena { get; set; }
+        public DateTime Ispunjena { get; set; }
+        public enum StatusEnum { Aktivna, U_pripremi, Gotova, Naplaćena};
+        public StatusEnum Status { get; set; }
+        public Stol Stol { get; set; }
     }
 }

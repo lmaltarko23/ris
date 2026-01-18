@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ris.Modeli
 {
-    internal class Kategorija
+    public class Kategorija
     {
         public int Id { get; set; }
         public string Naziv { get; set; }

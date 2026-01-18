@@ -13,11 +13,20 @@ namespace ris.Forme.Jednostavne
 {
     public partial class frmKategorijaDodaj : Form
     {
-        public enum ModEnum { Dodaj, Uredi};
-        public ModEnum Mod { get; set; }
-        public frmKategorijaDodaj()
+        public Kategorija kategorija;
+        public frmKategorijaDodaj(Kategorija _kategorija)
         {
             InitializeComponent();
+            kategorija = _kategorija;
+            if (kategorija != null)
+            {
+                txtNaziv.Text = kategorija.Naziv;
+                txtOpis.Text = kategorija.Opis;
+                this.Text = "Uredi podatke o kategoriji";
+            }
+            else {
+                this.Text = "Dodaj novu kategoriju";
+            }
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
@@ -27,6 +36,12 @@ namespace ris.Forme.Jednostavne
 
         private void btnSpremi_Click(object sender, EventArgs e)
         {
+            if (kategorija == null) dodajKategoriju();
+            else urediKategoriju();
+            this.Close();
+        }
+
+        void dodajKategoriju() {
             Kategorija novaKategorija;
 
             if (txtNaziv.Text == "" || txtOpis.Text == "")
@@ -42,6 +57,13 @@ namespace ris.Forme.Jednostavne
             };
 
             KategorijaRepo.Insert(novaKategorija);
+        }
+
+        void urediKategoriju()
+        {
+            kategorija.Naziv = txtNaziv.Text;
+            kategorija.Opis = txtOpis.Text;
+            KategorijaRepo.Update(kategorija);
         }
     }
 }

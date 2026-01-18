@@ -30,13 +30,28 @@ namespace ris.Forme.Jednostavne
 
         private void btnDodajNovu_Click(object sender, EventArgs e)
         {
-            frmKategorijaDodaj frmKategorijaDodaj = new frmKategorijaDodaj();
+            frmKategorijaDodaj frmKategorijaDodaj = new frmKategorijaDodaj(null);
             frmKategorijaDodaj.ShowDialog();
             UčitajKategorije();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            UčitajKategorije();
+        }
+
+        private void btnObrisi_Click(object sender, EventArgs e)
+        {
+            var Kategorija = dgvKategorija.CurrentRow.DataBoundItem as Kategorija;
+            MessageBox.Show("Brišete odabranu kategoriju. Jeste li sigurni?", "Obavijest", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            KategorijaRepo.Delete(Kategorija);
+            UčitajKategorije();
+        }
+
+        private void btnUredi_Click(object sender, EventArgs e)
+        {
+            var frmKategorijaDodaj = new frmKategorijaDodaj(dgvKategorija.CurrentRow.DataBoundItem as Kategorija);
+            frmKategorijaDodaj.ShowDialog();
             UčitajKategorije();
         }
     }
