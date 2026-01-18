@@ -1,5 +1,5 @@
-﻿using ris.Modeli;
-using ris.Repo;
+﻿using ris.Modeli.OK;
+using ris.Repo.OK;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

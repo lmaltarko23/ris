@@ -39,7 +39,7 @@
             dgvDjelatnici.Location = new Point(12, 12);
             dgvDjelatnici.Name = "dgvDjelatnici";
             dgvDjelatnici.RowHeadersWidth = 51;
-            dgvDjelatnici.Size = new Size(776, 270);
+            dgvDjelatnici.Size = new Size(776, 426);
             dgvDjelatnici.TabIndex = 0;
             // 
             // FrmDjelatnici

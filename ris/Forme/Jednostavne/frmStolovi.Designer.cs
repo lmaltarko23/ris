@@ -39,7 +39,7 @@
             dgvStolovi.Location = new Point(12, 12);
             dgvStolovi.Name = "dgvStolovi";
             dgvStolovi.RowHeadersWidth = 51;
-            dgvStolovi.Size = new Size(776, 188);
+            dgvStolovi.Size = new Size(776, 426);
             dgvStolovi.TabIndex = 0;
             // 
             // frmStolovi

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ris.Modeli
+namespace ris.Modeli.OK
 {
-    internal class Stol
+    public class Stol
     {
         public int Id { get; set; }
         public string Opis { get; set; }
@@ -16,5 +16,9 @@ namespace ris.Modeli
             rezerviran
         }
         public Statusi Status { get; set; }
+        public override string ToString()
+        {
+            return Opis;
+        }
     }
 }

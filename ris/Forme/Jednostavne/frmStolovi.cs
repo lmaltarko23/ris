@@ -5,8 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using ris.Modeli;
-using ris.Repo;
+using ris.Modeli.OK;
+using ris.Repo.OK;
 
 namespace ris.Forme.Jednostavne
 {

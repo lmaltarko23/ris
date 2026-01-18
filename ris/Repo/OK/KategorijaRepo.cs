@@ -4,11 +4,11 @@ using System.Security.Policy;
 using System.Text;
 using MySqlConnector;
 using ris.Dll;
-using ris.Modeli;
-using static ris.Modeli.Kategorija;
+using ris.Modeli.OK;
+using static ris.Modeli.OK.Kategorija;
 
 
-namespace ris.Repo
+namespace ris.Repo.OK
 {
     internal class KategorijaRepo
     {

@@ -2,11 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using ris.Modeli;
 using MySqlConnector;
+using ris.Modeli.OK;
 
 
-namespace ris.Repo
+namespace ris.Repo.OK
 {
     internal class ArtiklRepo
     {

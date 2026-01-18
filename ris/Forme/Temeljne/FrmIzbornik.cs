@@ -1,4 +1,5 @@
 ﻿using ris.Forme.Jednostavne;
+using ris.Forme.Slozene;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,7 +42,8 @@ namespace ris.Forme
 
         private void btnPregledNarudzbi_Click(object sender, EventArgs e)
         {
-            btnPregledNarudzbi.Enabled = false;
+            var frmNarudzbe = new FrmNarudzbe();
+            frmNarudzbe.ShowDialog();
         }
 
         private void btnNaplata_Click(object sender, EventArgs e)

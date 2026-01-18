@@ -4,9 +4,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using MySqlConnector;
 using ris.Dll;
-using ris.Modeli;
+using ris.Modeli.OK;
 
-namespace ris.Repo
+namespace ris.Repo.OK
 {
     internal class DjelatnikRepo
     {

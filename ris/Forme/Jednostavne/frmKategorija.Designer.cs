@@ -48,12 +48,12 @@
             dgvKategorija.ReadOnly = true;
             dgvKategorija.RowHeadersWidth = 51;
             dgvKategorija.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvKategorija.Size = new Size(773, 344);
+            dgvKategorija.Size = new Size(773, 391);
             dgvKategorija.TabIndex = 0;
             // 
             // btnDodaj
             // 
-            btnDodaj.Location = new Point(208, 381);
+            btnDodaj.Location = new Point(210, 409);
             btnDodaj.Name = "btnDodaj";
             btnDodaj.Size = new Size(170, 29);
             btnDodaj.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             // btnOsvjezi
             // 
-            btnOsvjezi.Location = new Point(681, 381);
+            btnOsvjezi.Location = new Point(681, 409);
             btnOsvjezi.Name = "btnOsvjezi";
             btnOsvjezi.Size = new Size(106, 29);
             btnOsvjezi.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             // btnUredi
             // 
-            btnUredi.Location = new Point(384, 381);
+            btnUredi.Location = new Point(386, 409);
             btnUredi.Name = "btnUredi";
             btnUredi.Size = new Size(137, 29);
             btnUredi.TabIndex = 3;
@@ -83,7 +83,7 @@
             // 
             // btnObrisi
             // 
-            btnObrisi.Location = new Point(527, 381);
+            btnObrisi.Location = new Point(529, 409);
             btnObrisi.Name = "btnObrisi";
             btnObrisi.Size = new Size(134, 29);
             btnObrisi.TabIndex = 4;

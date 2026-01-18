@@ -4,10 +4,10 @@ using System.Runtime.InteropServices;
 using System.Text;
 using MySqlConnector;
 using ris.Dll;
-using ris.Modeli;
-using static ris.Modeli.Stol;
+using ris.Modeli.OK;
+using static ris.Modeli.OK.Stol;
 
-namespace ris.Repo
+namespace ris.Repo.OK
 {
     internal class StolRepo
     {

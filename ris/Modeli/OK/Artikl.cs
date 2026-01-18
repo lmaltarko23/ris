@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ris.Modeli
+namespace ris.Modeli.OK
 {
     internal class Artikl
     {
