@@ -57,12 +57,11 @@ FOR EACH ROW
 BEGIN
     DECLARE dostupnost BOOLEAN;
     
-    -- Provjeri je li artikl dostupan
-    SELECT dostupan INTO dostupnost
+    SELECT dostupan INTO dostupno
     FROM artikl
     WHERE id = NEW.artikl_id;
     
-    IF NOT dostupnost THEN
+    IF NOT dostupno THEN
         SIGNAL SQLSTATE '45004'
         SET MESSAGE_TEXT = 'Artikl trenutno nije dostupan!';
     END IF;
@@ -92,6 +91,7 @@ BEGIN
 END$$
 
 DELIMITER ;
+
 
 
 
